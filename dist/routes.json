@@ -1,0 +1,23 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "C:\\\\Users\\\\meida\\\\Desktop\\\\my-nuxt-website\\\\test\\\\pages\\\\about.vue",
+    "chunkName": "pages/about",
+    "_name": "_d75b6d88"
+  },
+  {
+    "name": "blog-slug",
+    "path": "/blog/:slug?",
+    "component": "C:\\\\Users\\\\meida\\\\Desktop\\\\my-nuxt-website\\\\test\\\\pages\\\\blog\\\\_slug.vue",
+    "chunkName": "pages/blog/_slug",
+    "_name": "_6a09b117"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\meida\\\\Desktop\\\\my-nuxt-website\\\\test\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_97ebb7fe"
+  }
+]
