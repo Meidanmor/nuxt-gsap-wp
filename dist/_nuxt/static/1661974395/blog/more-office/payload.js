@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/blog/more-office", {data:[{}],fetch:{},mutations:[]});
