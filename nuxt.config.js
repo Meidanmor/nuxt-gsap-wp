@@ -10,7 +10,8 @@ let dynamicRoutes = () => {
 }
 
 export default {
-
+  buildDir: 'nuxt-dist',
+  
   server:{
     host: '0.0.0.0'
 
