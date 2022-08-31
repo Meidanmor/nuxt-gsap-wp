@@ -40,12 +40,12 @@ export default {
 
 beforeDestroy(){
     console.log('vcds');
-    ScrollTrigger.getAll().forEach((trigg) => {
+    /*ScrollTrigger.getAll().forEach((trigg) => {
     console.log(trigg);
     trigg.kill();
     gsap.killTweensOf(window);
 
-    });
+    });*/
 },
 transition(to, from){
 console.log('changed');
