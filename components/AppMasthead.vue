@@ -62,7 +62,6 @@ section.hero {
     align-items: center;
     top: 0;
     left: 0;
-    overflow-x: hidden;
   
    .star{
     color: #fff;
