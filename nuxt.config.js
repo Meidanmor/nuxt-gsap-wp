@@ -13,10 +13,6 @@ export default {
   target: 'static',
   buildDir: 'dist',
   
-  server:{
-    host: '0.0.0.0'
-
-  },
   mode: "universal",
   /*
    ** Headers of the page
