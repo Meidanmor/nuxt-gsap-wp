@@ -65,7 +65,8 @@ section.hero {
   
    .star{
     color: #fff;
-
+    opacity:0;
+    visibility: hidden;
      }
 }
 h2{
