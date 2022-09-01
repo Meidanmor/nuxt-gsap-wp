@@ -511,8 +511,9 @@ a:visited {
   }
 }
 
-@media (max-width: 768px)
+@media (max-width: 768px){
 ul.theProjects li {
     max-height: 400px;
+ }
 }
 </style>
