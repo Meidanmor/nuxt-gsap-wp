@@ -58,10 +58,11 @@ body {
 direction: rtl;
 background: #222;
 width:100%;
-overflow-x: hidden;
 }
 
-
+.theNuxt {
+    overflow-x: hidden;
+}
 
 $t-duration: 500ms;
 $t-delay: 200ms;
