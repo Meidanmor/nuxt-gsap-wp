@@ -114,6 +114,19 @@ a.showProjects {
     color: #fff;
     position: relative;
 }
+a.showProjects.afterAnim:before {
+    transform: scale(1)translate(0, 0);
+}
+
+a.showProjects:before {
+    content: url(/wp-content/uploads/2022/08/Arrow-2.svg);
+    position: absolute;
+    right: -35px;
+    top: 50%;
+    transform-origin: top left;
+    transition: .5s ease;
+    transform: scale(0)translate(10px, 10px);
+}
 a{
     text-decoration: none;
     height: 64px;
