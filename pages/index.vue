@@ -377,8 +377,12 @@ section.PROJECTS{
 }
 h2{
     font-family: 'ClashDisplay-light';
-    font-size: 35px;
-}
+    font-size: 130px;
+    line-height: 1;
+    letter-spacing: -2.8px;
+    max-width: 90vw;
+    width: 100%;
+ }
 ul.theProjects {
     margin: 0;
     padding: 0;
@@ -541,7 +545,6 @@ a:visited {
 section.PROJECTS{
 
     h2{
-    font-family: 'ClashDisplay-light';
     font-size: 35px;
     }
 }
