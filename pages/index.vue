@@ -74,7 +74,7 @@ console.log('changed');
   methods: {
 
 startAnim(){
-if(document.querySelector('a.showProjects')){
+/*if(document.querySelector('a.showProjects')){
 document.querySelector('a.showProjects').addEventListener('click', function(e){
 var heroHeight = document.querySelector('.hero').clientHeight;
 
@@ -84,7 +84,7 @@ duration: .5,
 ease: 'back.out(1)',
 });
 });
-};
+};*/
 
 
 let hrefStartAnim = document.querySelector('.heroBTNS a.startProject');
