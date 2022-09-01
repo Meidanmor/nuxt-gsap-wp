@@ -140,6 +140,9 @@ section.masthead {
     h2{
     font-size: 64px;
     }
+    .heroBTNS a {
+    font-size: 24px;
+    }
   }
 }
 </style>
