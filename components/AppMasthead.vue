@@ -110,6 +110,10 @@ a.startProject:before {
     transition: .5s ease;
     z-index: -1;
 }
+a.showProjects {
+    color: #fff;
+    position: relative;
+}
 a{
     text-decoration: none;
     height: 64px;
