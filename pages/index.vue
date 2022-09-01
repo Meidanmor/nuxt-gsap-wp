@@ -33,6 +33,7 @@
 
 <script>
 import AppMasthead from "@/components/AppMasthead.vue";
+import bodyScrollBar from "@/layouts/default.vue";
 import { gsap, Power4 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
@@ -66,17 +67,17 @@ console.log('changed');
   },
   methods: {
 startAnim(){
-/*if(document.querySelector('a.showProjects')){
+if(document.querySelector('a.showProjects')){
 document.querySelector('a.showProjects').addEventListener('click', function(e){
 var heroHeight = document.querySelector('.hero').clientHeight;
 
-gsap.to(document.documentElement,{
+gsap.to(bodyScrollBar,{
 scrollTo: heroHeight ,
 duration: .5,
 ease: 'back.out(1)',
 });
 });
-};*/
+};
 
 
 let hrefStartAnim = document.querySelector('.heroBTNS a.startProject');
