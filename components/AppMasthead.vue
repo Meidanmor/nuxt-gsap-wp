@@ -108,4 +108,11 @@ section.masthead {
     @include fluid-type(font-size, 320px, 1366px, 30px, 65px);
   }
 }
+@media(min-width: $desktopBreakpoin){
+ section.hero{
+    h2{
+    font-size: 64px;
+    }
+  }
+}
 </style>
