@@ -151,7 +151,7 @@ ease: 'back.out(1)',
 });
 };
 
-}
+},
 
 
 startAnim(){
