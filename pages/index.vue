@@ -510,4 +510,9 @@ a:visited {
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 768px)
+ul.theProjects li {
+    max-height: 400px;
+}
 </style>
