@@ -416,6 +416,8 @@ span.text {
     padding: 10px;
     display: inline-block;
     width: -webkit-fill-available;
+    visibility: hidden;
+    opacity: 0;
 }
 span.text.front {
     z-index: 2;
