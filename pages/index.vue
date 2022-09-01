@@ -543,11 +543,9 @@ a:visited {
 
 @media (max-width: 768px){
 section.PROJECTS{
-
-    h2{
+ h2{
     font-size: 35px;
-    }
-}
+  }
 ul.theProjects li {
     max-height: 400px;
  }
@@ -558,5 +556,7 @@ ul.theProjects li:before {
     right: 60px;
     z-index: 0;
  }
+ }
 }
+
 </style>
