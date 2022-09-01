@@ -119,7 +119,7 @@ a.showProjects.afterAnim:before {
 }
 
 a.showProjects:before {
-    content: url(/wp-content/uploads/2022/08/Arrow-2.svg);
+    content: url(/Arrow-2.svg);
     position: absolute;
     right: -35px;
     top: 50%;
