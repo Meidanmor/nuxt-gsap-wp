@@ -54,6 +54,18 @@
        url('/clash-display/ClashDisplay-Regular.woff') format('woff'), /* Modern Browsers */
        url('/clash-display/ClashDisplay-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
 }
+@font-face {
+  font-family: 'ClashDisplay-Medium';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/clash-display/ClashDisplay-Medium.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/clash-display/ClashDisplay-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/clash-display/ClashDisplay-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/clash-display/ClashDisplay-Medium.woff') format('woff'), /* Modern Browsers */
+       url('/clash-display/ClashDisplay-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+}
 body {
 direction: rtl;
 background: #222;
