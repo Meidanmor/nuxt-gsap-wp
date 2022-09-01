@@ -393,7 +393,6 @@ ul.theProjects {
     align-items: flex-end;
     width: 100%;
     margin-top: 80px;
-    overflow: hidden;
 }
 ul.theProjects li {
     position: relative;
