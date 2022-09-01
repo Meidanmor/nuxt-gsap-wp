@@ -374,6 +374,10 @@ section.PROJECTS{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    h2{
+    font-family: 'ClashDisplay-light';
+    }
 }
 ul.theProjects {
     margin: 0;
