@@ -48,8 +48,8 @@ console.log('changed');
   },
   mounted(){
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  window.addEventListener("load", this.addSmoothScrollBar, true);
-  window.addEventListener("load", this.startAnim, true);
+this.addSmoothScrollBar();
+ this.startAnim();
 
   },
   data() {
