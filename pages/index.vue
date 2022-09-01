@@ -510,4 +510,12 @@ a:visited {
     transform: rotate(360deg);
   }
 }
+
+@media(min-width: $desktopBreakpoin){
+ section.hero{
+    h2{
+    font-size: 64px;
+    }
+ }
+}
 </style>
