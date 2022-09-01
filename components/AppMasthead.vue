@@ -83,6 +83,33 @@ h2{
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.heroBTNS a.startProject.afterAnim {
+    background: transparent;
+    color: #000;
+}
+.heroBTNS a.startProject {
+    background: transparent;
+    color: #fff;
+}
+.heroBTNS a.startProject.afterAnim:before {
+    transform: scaleX(1);
+}
+
+a.startProject:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 32px;
+    border: 1px solid #fff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: .5s ease;
+    z-index: -1;
+}
 a{
     text-decoration: none;
     height: 64px;
