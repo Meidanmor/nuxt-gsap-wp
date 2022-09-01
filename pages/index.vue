@@ -450,6 +450,11 @@ color: #fff;
     transform: scaleX(0);
     transform-origin: right;
 }
+.theImage img {
+    transition: .7s ease;
+    transform: scaleX(0);
+    transform-origin: right;
+}
 .Open{
 position: absolute;
     z-index: 9;
