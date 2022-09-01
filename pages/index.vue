@@ -394,6 +394,21 @@ ul.theProjects li {
     counter-increment: section;
     height: 600px;
 }
+ul.theProjects li:before {
+    opacity: .5;
+    content: "0"counter(section);
+    position: absolute;
+    right: 0;
+    top: 25%;
+    line-height: 1;
+    z-index: 9;
+    display: block;
+    font-size: 200px;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: bold;
+    transform: rotate(90deg);
+}
 .postImgWrap {
     position: relative;
     align-items: flex-end;
@@ -521,6 +536,13 @@ a:visited {
 @media (max-width: 768px){
 ul.theProjects li {
     max-height: 400px;
+ }
+ul.theProjects li:before {
+    top: -50px;
+    font-size: 80px;
+    transform: rotate(0);
+    right: 60px;
+    z-index: 0;
  }
 }
 </style>
