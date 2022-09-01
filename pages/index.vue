@@ -382,6 +382,7 @@ h2{
     letter-spacing: -2.8px;
     max-width: 90vw;
     width: 100%;
+    color: #404040;
  }
 ul.theProjects {
     margin: 0;
