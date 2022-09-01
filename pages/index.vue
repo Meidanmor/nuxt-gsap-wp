@@ -374,10 +374,10 @@ section.PROJECTS{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    h2{
+}
+h2{
     font-family: 'ClashDisplay-light';
-    }
+    font-size: 35px;
 }
 ul.theProjects {
     margin: 0;
@@ -538,6 +538,13 @@ a:visited {
 }
 
 @media (max-width: 768px){
+section.PROJECTS{
+
+    h2{
+    font-family: 'ClashDisplay-light';
+    font-size: 35px;
+    }
+}
 ul.theProjects li {
     max-height: 400px;
  }
