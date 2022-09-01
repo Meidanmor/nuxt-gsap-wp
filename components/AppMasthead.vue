@@ -119,7 +119,7 @@ a.showProjects.afterAnim:before {
 }
 
 a.showProjects:before {
-    content: url(/Arrow-2.svg);
+    content: url(/Arrow-black.svg);
     position: absolute;
     right: -35px;
     top: 50%;
