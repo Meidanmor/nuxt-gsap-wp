@@ -33,7 +33,7 @@
 
 <script>
 import AppMasthead from "@/components/AppMasthead.vue";
-import bodyScrollBar from "@/layouts/default.vue";
+import { bodyScrollBar } from "@/layouts/default.vue";
 import { gsap, Power4 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
