@@ -97,7 +97,7 @@ if( sessionStorage.getItem('bodyScrollBar') && sessionStorage.getItem('bodyScrol
   });
 }
 
-if(document.querySelector('a.showProjects')){
+/*if(document.querySelector('a.showProjects')){
 document.querySelector('a.showProjects').addEventListener('click', function(e){
 var heroHeight = document.querySelector('.hero').clientHeight;
   console.log(bodyScrollBar+"Hi");
@@ -108,7 +108,7 @@ duration: .5,
 ease: 'back.out(1)',
 });
 });
-};
+};*/
 
 }
 
