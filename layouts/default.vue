@@ -11,16 +11,108 @@
 
 <script>
 import AppNav from "~/components/AppNav.vue";
+import { gsap, Power4 } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+import Scrollbar from 'smooth-scrollbar';
 
 export default {
 
   components: {
     AppNav
   },
-
+  mounted(){
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  this.addSmoothScrollBar();
+  },
   methods:{
+   addSmoothScrollBar(){
+// Setup
 
+const scroller = document.querySelector('.SCrollbar');
+
+const bodyScrollBar = Scrollbar.init(scroller, { damping: 0.1, alwaysShowTracks: false });
+window.onbeforeunload = function(e){
+  sessionStorage.setItem('bodyScrollBar', bodyScrollBar.offset.y);
+};
+ScrollTrigger.scrollerProxy('.SCrollbar', {
+  scrollTop(value) {
+    if (arguments.length) {
+      bodyScrollBar.scrollTop = value;
+    }
+    return bodyScrollBar.scrollTop;
   }
+});
+
+bodyScrollBar.addListener(ScrollTrigger.update);
+  console.log(bodyScrollBar);
+
+ScrollTrigger.defaults({ scroller: scroller });
+/*window.addEventListener("scroll", (event) => {
+if (bodyScrollBar.scrollTop > 10){
+gsap.to('.scrollToTop', {
+x: 0,
+autoAlpha: 1,
+duration: 0,
+});
+} else{
+gsap.to('.scrollToTop', {
+x: -100,
+autoAlpha: 0,
+duration: .5,
+});
+};
+});*/
+ /* if(document.querySelector('.scrollToTop')){
+document.querySelector('.scrollToTop').addEventListener('click', function(){
+if(document.getElementById('modal-1').classList.contains('is-open') ){
+  gsap.to('.scroller',{ scrollTo: 0 });
+   } else{
+  gsap.to(bodyScrollBar,{ scrollTo: 0 });
+   }
+});
+};*/
+
+
+if(document.querySelector('.logo svg')){
+document.querySelector('.logo svg').addEventListener('click', function(e){
+if(location.href == "https://spite.meidanm.com/" || location.href == "https://spite.meidanm.com/#project"){
+} else{
+location.href = "https://spite.meidanm.com/";
+return false;
+}
+
+gsap.to(bodyScrollBar,{
+scrollTo: 0,
+duration: .5,
+ease: 'back.out(1)',
+});
+});
+};
+
+if( sessionStorage.getItem('bodyScrollBar') && sessionStorage.getItem('bodyScrollBar') !== "0" ){
+  gsap.to(bodyScrollBar, {
+  scrollTo: sessionStorage.getItem('bodyScrollBar'),
+  duration: 0.5,
+  });
+}
+
+if(document.querySelector('a.showProjects')){
+document.querySelector('a.showProjects').addEventListener('click', function(e){
+var heroHeight = document.querySelector('.hero').clientHeight;
+  console.log(bodyScrollBar+"Hi");
+
+gsap.to(bodyScrollBar,{
+scrollTo: heroHeight ,
+duration: .5,
+ease: 'back.out(1)',
+});
+});
+};
+
+}
+
+}
 };
 </script>
 
