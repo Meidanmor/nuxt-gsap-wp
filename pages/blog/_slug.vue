@@ -130,6 +130,7 @@ gsap.fromTo('.didYouLike h3', {
 },
 {
 	scrollTrigger: {
+	     scroller: '.scroller',
 		trigger: '.didYouLike',
 		scrub: 1.5,
 		start: 'top +50%',
@@ -149,6 +150,7 @@ gsap.fromTo('.contain .no', {
 },
 {
 	scrollTrigger: {
+		scroller: '.scroller',
 		trigger: '.didYouLike',
 		scrub: 1.5,
 		start: 'top +50%',
@@ -169,6 +171,7 @@ gsap.fromTo('.contain .yes', {
 },
 {
 	scrollTrigger: {
+		scroller: '.scroller',
 		trigger: '.didYouLike',
 		scrub: 1.5,
 		start: 'top +50%',
@@ -181,8 +184,9 @@ gsap.fromTo('.contain .yes', {
 	y: 0,
 	ease: "Power.bounce",
 });	
-gsap.to('.modal h2', {
+gsap.to('h1', {
 	scrollTrigger: {
+                scroller: '.scroller',
 		trigger: '.modal__container',
 		scrub: 1,
 		start: 'top top',
@@ -196,6 +200,7 @@ gsap.to('.modal h2', {
 if( document.querySelector(".modal .theVideo") ){
 gsap.to('.theVideo>figure', {
 	scrollTrigger: {
+		scroller: '.scroller',
 		trigger: '.theVidContainer',
 		pin: '.theVidContainer',
 		scrub: 1,
