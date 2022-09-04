@@ -74,7 +74,7 @@ bodyScrollBar.addListener(ScrollTrigger.update);
 ScrollTrigger.defaults({ scroller: scroller });
 
 console.log('post page');
- this.$gsap.to('section.postContents', {
+gsap.to('section.postContents', {
  scrollTrigger: {
  trigger: '.mainWrapper',
  pin: true,
