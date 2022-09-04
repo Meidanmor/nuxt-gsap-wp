@@ -26,7 +26,7 @@ export default {
   },
   mounted() {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  this.animatePostContents();
+  window.addEventListener('load', this.animatePostContents, true);
   },
   data() {
     return {
