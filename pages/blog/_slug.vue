@@ -235,6 +235,9 @@ document.querySelector('.scrollToTop').style.zIndex = "9";
 .content >>> img{
 max-height: 200px;
 }
+.post >>> .pin-spacer{
+pointer-events: none;
+}
 [data-scrollbar]{
 height: 100vh;
 }
