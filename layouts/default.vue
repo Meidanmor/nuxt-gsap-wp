@@ -14,7 +14,7 @@ import AppNav from "~/components/AppNav.vue";
 import { gsap, Power4 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
-import Scrollbar from 'smooth-scrollbar';
+//import Scrollbar from 'smooth-scrollbar';
 
 export default {
 
