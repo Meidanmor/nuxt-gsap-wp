@@ -232,6 +232,14 @@ document.querySelector('.scrollToTop').style.zIndex = "9";
 </script>
 
 <style lang="scss" scoped>
+.content >>> figure.wp-block-video {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
 .content >>> img{
 max-height: 200px;
 }
