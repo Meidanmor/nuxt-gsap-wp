@@ -52,7 +52,7 @@ export default {
   methods: {
    
        animatePostContents() {
-
+console.log('post page');
  this.$gsap.to('section.postContents', {
  scrollTrigger: {
  trigger: '.mainWrapper',
