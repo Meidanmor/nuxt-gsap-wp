@@ -232,6 +232,9 @@ document.querySelector('.scrollToTop').style.zIndex = "9";
 </script>
 
 <style lang="scss" scoped>
+.modal__container img{
+max-height: 200px;
+}
 [data-scrollbar]{
 height: 100vh;
 }
