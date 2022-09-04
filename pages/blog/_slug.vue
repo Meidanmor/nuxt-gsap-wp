@@ -68,23 +68,153 @@ bodyScrollBar.addListener(ScrollTrigger.update);
 
 ScrollTrigger.defaults({ scroller: scroller });
 
-console.log('post page');
-gsap.to('section.postContents', {
- scrollTrigger: {
- trigger: '.mainWrapper',
- pin: true,
- pinSpacing: false,
-          start: 'top',
-          end: '+=100',
-          scrub: true,
+var height = document.querySelector('.modal__container').clientHeight;
+document.querySelector('.modal__container').style.height = height + 'px';
+document.querySelector('.no a').addEventListener('click', function(e){
+	e.preventDefault();
+ gsap.to(bodyScrollBar, {  delay:.2, ease: "back.in(0.5)" ,duration: 1,scrollTo: height});
+});
+gsap.to('.modalPostImage img', {
+	scrollTrigger: {
+		scroller: '.scroller',
+		trigger: '.modal__container',
+		scrub: true,
+		start: 'top top',
+		end: 'bottom bottom' ,
+	},
+	rotate: 8,
+	scale: 0.8,
+	ease: "Power.bounce",
+});	
+gsap.to('.modalPostImage', {
+	scrollTrigger: {
+		scroller: '.scroller',
+		trigger: '.prevNextLinks',
+		scrub: 2,
+		start: 'top top',
+		end: 'top top' ,
+	},
+	opacity: 0,
+	ease: "Power.bounce",
+});
+gsap.fromTo('.prevNextLinks a.theNext', {
+autoAlpha: 0	
 },
-  y: -50,
-  color: "#fff",
-  backgroundImage: "linear-gradient(0, #000 100%, transparent)",
-  borderTopLeftRadius: "50px",
-  borderTopRightRadius: "50px",
-})
+	{
+	scrollTrigger: {
+		scroller: '.scroller',
+		trigger: '.prevNextLinks',
+		scrub: 1,
+		start: 'top top',
+		end: 'top top' ,
+		onEnter: () => {
+			document.querySelector('.prevNextLinks a.theNext span.front').classList.add('active');
+			document.querySelector('.prevNextLinks a.theNext span.back').classList.add('active');
+			document.querySelector('.prevNextLinks a.theNext span.upNext').classList.add('active');
+		} ,
+        onLeaveBack: () => {
+		    document.querySelector('.prevNextLinks a.theNext span.front').classList.remove('active');
+			document.querySelector('.prevNextLinks a.theNext span.back').classList.remove('active');
+			document.querySelector('.prevNextLinks a.theNext span.upNext').classList.remove('active');
+	},
+	},
+	autoAlpha: 1,
+	ease: "Power.bounce",
+});	
 
+gsap.fromTo('.didYouLike h3', {
+	rotate: 0,
+	opacity:0,
+    scale: 1,
+	y: -100,
+},
+{
+	scrollTrigger: {
+		trigger: '.didYouLike',
+		scrub: 1.5,
+		start: 'top +50%',
+		end: 'top top' ,
+	},
+	rotate: 8,
+	scale: 0.8,
+	opacity:1,
+	y: 0,
+	ease: "Power.bounce",
+});
+gsap.fromTo('.contain .no', {
+	opacity:0,
+    scale: .8,
+	x: 100,
+	y: 50,
+},
+{
+	scrollTrigger: {
+		trigger: '.didYouLike',
+		scrub: 1.5,
+		start: 'top +50%',
+		end: 'top top' ,
+	},
+	rotate: 8,
+	scale:1,
+	opacity:1,
+	x: 0,
+    y: 0,
+	ease: "Power.bounce",
+});
+gsap.fromTo('.contain .yes', {
+	opacity:0,
+    scale: .8,
+	x: -100,
+	y: 50,
+},
+{
+	scrollTrigger: {
+		trigger: '.didYouLike',
+		scrub: 1.5,
+		start: 'top +50%',
+		end: 'top top' ,
+	},
+	rotate: 8,
+	scale:1,
+	opacity:1,
+	x: 0,
+	y: 0,
+	ease: "Power.bounce",
+});	
+gsap.to('.modal h2', {
+	scrollTrigger: {
+		trigger: '.modal__container',
+		scrub: 1,
+		start: 'top top',
+		end: '+=50%'
+	},
+	x: -100,
+	opacity: 0,
+	scale: 0.8,
+	ease: "Power4.ease",
+});
+if( document.querySelector(".modal .theVideo") ){
+gsap.to('.theVideo>figure', {
+	scrollTrigger: {
+		trigger: '.theVidContainer',
+		pin: '.theVidContainer',
+		scrub: 1,
+		pinSpacing: true,
+		start: 'top top',
+		end: '+=50%',
+	},
+	scale: 1.5,
+});
+document.querySelector(".modal video").playbackRate = 1.5;
+}
+	
+document.querySelector('.scroller').addEventListener('scroll',function(e) {
+if(e.target.scrollTop > 50 ){
+document.querySelector('.scrollToTop').style.zIndex = "99";
+} else {
+document.querySelector('.scrollToTop').style.zIndex = "9";	
+}
+});
 
 
 }
