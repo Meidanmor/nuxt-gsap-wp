@@ -42,6 +42,7 @@ export default {
 
 transition(to, from){
 console.log('changed');
+ScrollTrigger.refresh();
 },
   components: {
     AppMasthead
