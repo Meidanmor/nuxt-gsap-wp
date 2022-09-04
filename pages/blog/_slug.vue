@@ -325,7 +325,7 @@ width: fit-content;
     padding: 5px 8px 0;
 }
 
- img.attachment-large.size-large.wp-post-image {
+ img {
     max-height: 300px;
     max-width: 200px;
     background: transparent;
@@ -338,7 +338,5 @@ figure.thePostGallery{
  figure{
 	margin: 0;
 }
-img{
-height: 100%;
-}
+
 </style>
