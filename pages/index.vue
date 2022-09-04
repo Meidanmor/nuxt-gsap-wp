@@ -1,5 +1,6 @@
 <template>
   <div class="theNuxt">
+  <div class="container">
     <app-masthead></app-masthead>
     
 <section class="PROJECTS">
@@ -29,6 +30,8 @@
   </div>
   </section>
   </div>
+  </div>
+  
 </template>
 
 <script>
@@ -375,7 +378,9 @@ function moveMagnet(event) {
 </script>
 
 <style lang="scss">
-
+.container{
+overflow-x: hidden;
+}
 [data-scrollbar]{
   height: 100vh;
 }
