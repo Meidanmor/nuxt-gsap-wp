@@ -1,15 +1,10 @@
 <template>
   <div class="theNuxt">
   <main class="post individual">
-  <div class="mainWrapper">
-    <img :src="post.images.large" width="500" height="500"/>
-    <small class="date">{{ post.date | dateformat }}</small>
-    </div>
-
-    <section class="postContents">
-    <h1>{{ post.title.rendered }}</h1>
-<div v-html="post.content.rendered"></div>
-    </section>
+  <div class="modalPostImage"> <img :src="post.images.large" width="500" height="500"/></div>
+  
+  <div class="modal__container" role="dialog" aria-modal="true">{{ post.title.rendered }} <div v-html="post.content.rendered"></div><div class="didYouLike"><h3> אהבת את הפרויקט? </h3> <div class="contain"><div class="yes"><a href="javascript:void(0)"> כן! </a> </div><div class="no"> <a href="javascript:void(0)"> לא ממש </a> </div> </div> </div> </div>
+  
   </main>
   </div>
 </template>
