@@ -2,9 +2,9 @@
   <div class="theNuxt">
   <main class="post individual">
   <div class="modalPostImage"> <img :src="post.images.large" width="500" height="500"/></div>
-  
+  <div class="scroller">
   <div class="modal__container" role="dialog" aria-modal="true"><h1>{{ post.title.rendered }}</h1> <div v-html="post.content.rendered"></div><div class="didYouLike"><h3> אהבת את הפרויקט? </h3> <div class="contain"><div class="yes"><a href="javascript:void(0)"> כן! </a> </div><div class="no"> <a href="javascript:void(0)"> לא ממש </a> </div> </div> </div> </div>
-  
+  <div>
   </main>
   </div>
 </template>
@@ -48,13 +48,13 @@ export default {
   methods: {
    
        animatePostContents() {
-const scroller = document.querySelector('.theNuxt');
+const scroller = document.querySelector('.scroller');
 
 const bodyScrollBar = Scrollbar.init(scroller, { damping: 0.1, alwaysShowTracks: false });
 window.onbeforeunload = function(e){
   sessionStorage.setItem('bodyScrollBar', bodyScrollBar.offset.y);
 };
-ScrollTrigger.scrollerProxy('.theNuxt', {
+ScrollTrigger.scrollerProxy('.scroller', {
   scrollTop(value) {
     if (arguments.length) {
       bodyScrollBar.scrollTop = value;
