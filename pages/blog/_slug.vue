@@ -232,6 +232,9 @@ document.querySelector('.scrollToTop').style.zIndex = "9";
 </script>
 
 <style lang="scss" scoped>
+[data-scrollbar]{
+height: 100vh;
+}
 .discreption {
     background: #fff;
     color: #000;
@@ -244,6 +247,7 @@ document.querySelector('.scrollToTop').style.zIndex = "9";
 /*    background: linear-gradient(45deg, transparent -10% , black 76%);*/
     padding: 0px;
     overflow: visible;
+    overflow-x: hidden;
 	    position: relative;
 }
 h1 {
@@ -333,5 +337,8 @@ figure.thePostGallery{
 }
  figure{
 	margin: 0;
+}
+img{
+height: 100%;
 }
 </style>
