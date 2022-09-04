@@ -197,7 +197,7 @@ gsap.to('h1', {
 	scale: 0.8,
 	ease: "Power4.ease",
 });
-if( document.querySelector(".modal .theVideo") ){
+if( document.querySelector(".theVideo") ){
 gsap.to('.theVideo>figure', {
 	scrollTrigger: {
 		scroller: '.scroller',
@@ -210,7 +210,7 @@ gsap.to('.theVideo>figure', {
 	},
 	scale: 1.5,
 });
-document.querySelector(".modal video").playbackRate = 1.5;
+document.querySelector("video").playbackRate = 1.5;
 }
 	
 document.querySelector('.scroller').addEventListener('scroll',function(e) {
