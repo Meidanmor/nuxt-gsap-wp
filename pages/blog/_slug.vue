@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import Scrollbar from 'smooth-scrollbar';
 import { gsap, Power4 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
@@ -52,6 +53,26 @@ export default {
   methods: {
    
        animatePostContents() {
+const scroller = document.querySelector('.theNuxt');
+
+const bodyScrollBar = Scrollbar.init(scroller, { damping: 0.1, alwaysShowTracks: false });
+window.onbeforeunload = function(e){
+  sessionStorage.setItem('bodyScrollBar', bodyScrollBar.offset.y);
+};
+ScrollTrigger.scrollerProxy('.theNuxt', {
+  scrollTop(value) {
+    if (arguments.length) {
+      bodyScrollBar.scrollTop = value;
+    }
+    return bodyScrollBar.scrollTop;
+  }
+});
+
+bodyScrollBar.addListener(ScrollTrigger.update);
+  console.log(bodyScrollBar);
+
+ScrollTrigger.defaults({ scroller: scroller });
+
 console.log('post page');
  this.$gsap.to('section.postContents', {
  scrollTrigger: {
