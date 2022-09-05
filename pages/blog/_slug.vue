@@ -97,7 +97,7 @@ gsap.to('.modalPostImage', {
 	opacity: 0,
 	ease: "Power.bounce",
 });
-gsap.fromTo('.prevNextLinks a.theNext', {
+/*gsap.fromTo('.prevNextLinks a.theNext', {
 autoAlpha: 0	
 },
 	{
@@ -120,7 +120,7 @@ autoAlpha: 0
 	},
 	autoAlpha: 1,
 	ease: "Power.bounce",
-});	
+});*/	
 
 gsap.fromTo('.didYouLike h3', {
 	rotate: 0,
