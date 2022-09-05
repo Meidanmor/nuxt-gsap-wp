@@ -258,6 +258,7 @@ height: 100vh;
 }
 .modal__container {
     width: 100%;
+    height: 100%;
 /*    background: linear-gradient(45deg, transparent -10% , black 76%);*/
     padding: 0px;
     overflow: hidden;
