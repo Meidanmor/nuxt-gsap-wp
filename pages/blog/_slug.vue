@@ -26,7 +26,7 @@ export default {
   },
   mounted() {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  this.animatePostContents
+  this.animatePostContents();
   },
   data() {
     return {
