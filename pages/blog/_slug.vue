@@ -69,7 +69,7 @@ bodyScrollBar.addListener(ScrollTrigger.update);
 ScrollTrigger.defaults({ scroller: scroller });
 
 var height = document.querySelector('.modal__container').clientHeight;
-//document.querySelector('.modal__container').style.height = height + 'px';
+document.querySelector('.modal__container').style.height = height + 'px';
 document.querySelector('.no a').addEventListener('click', function(e){
 	e.preventDefault();
  gsap.to(bodyScrollBar, {  delay:.2, ease: "back.in(0.5)" ,duration: 1,scrollTo: height});
@@ -260,9 +260,9 @@ height: 100vh;
     width: 100%;
 /*    background: linear-gradient(45deg, transparent -10% , black 76%);*/
     padding: 0px;
-    overflow: visible;
+    overflow: hidden;
     overflow-x: hidden;
-	    position: relative;
+    position: relative;
 }
 h1 {
 	font-family: 'clashdisplay-semibold';
@@ -352,5 +352,10 @@ width: fit-content;
  .content >>> figure{
 	margin: 0;
 }
-
+.content >>> .didYouLike {
+display: flex;
+height: 100vh;
+align-items: center;
+justify-content: center;
+}
 </style>
