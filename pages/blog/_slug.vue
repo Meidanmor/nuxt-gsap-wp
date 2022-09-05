@@ -352,7 +352,7 @@ width: fit-content;
  .content >>> figure{
 	margin: 0;
 }
-.content >>> .didYouLike {
+.post >>> .didYouLike {
 display: flex;
 height: 100vh;
 align-items: center;
