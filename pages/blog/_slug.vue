@@ -69,7 +69,7 @@ bodyScrollBar.addListener(ScrollTrigger.update);
 ScrollTrigger.defaults({ scroller: scroller });
 
 var height = document.querySelector('.modal__container').clientHeight;
-document.querySelector('.modal__container').style.height = height + 'px';
+//document.querySelector('.modal__container').style.height = height + 'px';
 document.querySelector('.no a').addEventListener('click', function(e){
 	e.preventDefault();
  gsap.to(bodyScrollBar, {  delay:.2, ease: "back.in(0.5)" ,duration: 1,scrollTo: height});
@@ -249,7 +249,7 @@ pointer-events: none;
 [data-scrollbar]{
 height: 100vh;
 }
-.discreption {
+.content >>> .discreption {
     background: #fff;
     color: #000;
     padding: 20px;
@@ -297,7 +297,7 @@ h1 {
 .modalPostImage img{
 filter: drop-shadow(5px 5px 5px black);
 }
-.theVideo{
+.content >>> .theVideo{
     height: 100vh;
     display: flex;
     align-items: center;
@@ -307,12 +307,12 @@ filter: drop-shadow(5px 5px 5px black);
  .pin-spacer{
 		pointer-events: none
 }
- figure.wp-block-video {
+.content >>> figure.wp-block-video {
 position: fixed;	
 width: fit-content;
 }
 
- figure.wp-block-video:before {
+ .content >>> figure.wp-block-video:before {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -326,7 +326,7 @@ width: fit-content;
     background-repeat: no-repeat;
     background-position: center;
 }
- video {
+ .content >>> video {
     max-height: 400px;
     object-fit: contain;
     background: transparent;
@@ -339,17 +339,17 @@ width: fit-content;
     padding: 5px 8px 0;
 }
 
- img {
+ .modalPostImage img {
     max-height: 300px;
     max-width: 200px;
     background: transparent;
     height: 100%;
 }
 
-figure.thePostGallery{
+.content >>> figure.thePostGallery{
 	max-width: 100%;
 }
- figure{
+ .content >>> figure{
 	margin: 0;
 }
 
