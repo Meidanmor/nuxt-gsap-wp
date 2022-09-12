@@ -24,9 +24,9 @@ export default {
     post() {
       return this.posts.find(el => el.slug === this.slug);
     },
-   /* prevPost() {
+    prevPost() {
       return this.posts.find(el => el.slug === this.prevId);
-    },*/
+    },
   },
   mounted() {
      console.log(this.post.prev_next);
