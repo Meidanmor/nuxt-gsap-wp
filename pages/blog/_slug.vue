@@ -46,7 +46,11 @@ export default {
       return this.posts.find(el => el.slug === this.post.prev_next.prev.slug);
     },
    nextPost() {
+   if(this.post.prev_next.next){
       return this.posts.find(el => el.slug === this.post.prev_next.next.slug);
+      } else{
+      return this.posts['0'];
+      }
     },
   },
   mounted() {
