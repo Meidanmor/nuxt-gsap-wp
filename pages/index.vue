@@ -51,6 +51,7 @@ ScrollTrigger.refresh();
     AppMasthead
   },
   mounted(){
+  console.log(this.posts);
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
  this.startAnim();
 
