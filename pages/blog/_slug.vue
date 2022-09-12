@@ -26,7 +26,8 @@ export default {
     },
     prevPost() {
       return this.posts.find(el => el.id === this.prevId);
-    }
+    },
+   console.log(this.$route.params);
   },
   mounted() {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
