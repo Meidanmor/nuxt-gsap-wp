@@ -29,7 +29,7 @@ export default {
     },
   },
   mounted() {
-console.log(this.post.prev_next.prev.slug);
+console.log(this.prevPost);
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   this.animatePostContents();
   },
