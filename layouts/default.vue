@@ -17,7 +17,12 @@ import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 //import Scrollbar from 'smooth-scrollbar';
 
 export default {
-
+  watch: {
+    $route(to, from) {
+      console.log('route change to', to)
+      console.log('route change from', from)
+    },
+  },
   components: {
     AppNav
   },
