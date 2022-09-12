@@ -35,7 +35,7 @@ export default {
   data() {
     return {
       slug: this.$route.params.slug,
-      prevId:   {{ post.prev_next.prev }}
+      prevId: this.$route.params.prev_next.prev,
     };
   },
    head() {
