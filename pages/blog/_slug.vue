@@ -39,12 +39,12 @@ export default {
  setup() {
     // same as beforeRouteLeave option with no access to `this`
     onBeforeRouteLeave((to, from) => {
-  sessionStorage.setItem('scrollPos');
+  sessionStorage.setItem('scrollPos', '10');
 console.log(sessionStorage.getItem('scrollPos'));
     })
     // same as beforeRouteUpdate option with no access to `this`
     onBeforeRouteUpdate(async (to, from) => {
-  sessionStorage.setItem('scrollPos');
+  sessionStorage.setItem('scrollPos', '5');
 console.log(sessionStorage.getItem('scrollPos'));
     })
   },
