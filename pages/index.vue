@@ -13,7 +13,7 @@
          <span class="text front">{{ post.title.rendered }}</span>
          <span class="text back">{{ post.title.rendered }}</span>
          <div class="magnetic theImage">
-       <nuxt-link :to="`blog/${post.slug}`" class="Open">
+       <nuxt-link :to="/blog/${post.slug}`" class="Open">
        <span>
           צפייה בפרויקט
 </span>
