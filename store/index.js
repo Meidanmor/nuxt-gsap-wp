@@ -26,7 +26,7 @@ export const actions = {
 
       posts = posts
         .filter(el => el.status === "publish")
-        .map(({ id, slug, title, excerpt, date, tags, content, images, yoast_head, yoast_meta }) => ({
+        .map(({ id, slug, title, excerpt, date, tags, content, images, yoast_head, yoast_meta, prev_next }) => ({
           id,
           slug,
           title,
@@ -36,7 +36,8 @@ export const actions = {
           content,
           images,
           yoast_head,
-          yoast_meta
+          yoast_meta,
+        prev_next,
         }));
 
 
