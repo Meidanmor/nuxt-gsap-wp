@@ -42,14 +42,10 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
 export default {
-  watch: {
-    $route(to, from) {
-      console.log('route change to', to)
-      console.log('route change from', from)
-      sessionStorage.setItem('scrollPos', this.bodyScrollBar.scrollTop)
-console.log(sessionStorage.getItem('scrollPos'))
+    middleware() {
+sessionStorage.setItem('scrollPos', this.bodyScrollBar.offset.y)
+console.log(sessionStorage.getItem('scrollPos'))  
     },
-  },
 transition(to, from){
 console.log('changed');
 ScrollTrigger.refresh();
