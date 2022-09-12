@@ -1,11 +1,29 @@
 <template>
   <div class="theNuxt">
   <main class="post individual">
-  {{ post.prev_next.prev.slug }}
   <div class="modalPostImage"> <img :src="post.images.large" width="500" height="500"/></div>
   <div class="scroller">
   <div class="modal__container" role="dialog" aria-modal="true"><h1>{{ post.title.rendered }}</h1> <div class="content" v-html="post.content.rendered"></div><div class="didYouLike"><h3> אהבת את הפרויקט? </h3> <div class="contain"><div class="yes"><a href="javascript:void(0)"> כן! </a> </div><div class="no"> <a href="javascript:void(0)"> לא ממש </a> </div> </div> </div> </div>
-  <div>
+         <div class="nextPost">
+	 <li>
+        <div class="postImgWrap">
+         <span class="text front">{{ prevPost.title.rendered }}</span>
+         <span class="text back">{{ prevPost.title.rendered }}</span>
+         <div class="magnetic theImage">
+       <nuxt-link :to="`blog/${prevPost.slug}`" class="Open">
+       <span>
+          צפייה בפרויקט
+</span>
+</nuxt-link>
+<div class="hideOverflow">
+          <img :src="post.images.large" width="500" height="500"/>
+          </div>
+          </div>
+        </div>
+</li>
+</div>
+
+ </div>
   </main>
   </div>
 </template>
@@ -26,6 +44,9 @@ export default {
     },
    prevPost() {
       return this.posts.find(el => el.slug === this.post.prev_next.prev.slug);
+    },
+   nextPost() {
+      return this.posts.find(el => el.slug === this.post.prev_next.next.slug);
     },
   },
   mounted() {
