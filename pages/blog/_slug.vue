@@ -16,7 +16,7 @@
 </span>
 </nuxt-link>
 <div class="hideOverflow">
-          <img :src="post.images.large" width="500" height="500"/>
+          <img :src="prevPost.images.large" width="500" height="500"/>
           </div>
           </div>
         </div>
