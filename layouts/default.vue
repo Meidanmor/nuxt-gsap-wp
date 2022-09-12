@@ -21,6 +21,8 @@ export default {
     $route(to, from) {
       console.log('route change to', to)
       console.log('route change from', from)
+      sessionStorage.setItem('scrollPos', bodyScrollBar.scrollTop)
+console.log(sessionStorage.getItem('scrollPos'))
     },
   },
   components: {
