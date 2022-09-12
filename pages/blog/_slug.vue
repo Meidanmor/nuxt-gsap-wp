@@ -33,21 +33,9 @@ import Scrollbar from 'smooth-scrollbar';
 import { gsap, Power4 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
-import { onBeforeRouteLeave, onBeforeRouteUpdate } from 'vue-router'
 
 export default {
- setup() {
-    // same as beforeRouteLeave option with no access to `this`
-    onBeforeRouteLeave((to, from) => {
-  sessionStorage.setItem('scrollPos', '10');
-console.log(sessionStorage.getItem('scrollPos'));
-    })
-    // same as beforeRouteUpdate option with no access to `this`
-    onBeforeRouteUpdate(async (to, from) => {
-  sessionStorage.setItem('scrollPos', '5');
-console.log(sessionStorage.getItem('scrollPos'));
-    })
-  },
+
   computed: {
     posts() {
       return this.$store.state.posts;
