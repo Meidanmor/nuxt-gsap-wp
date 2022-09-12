@@ -35,6 +35,14 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
 export default {
+  beforeRouteEnter(to, from) {
+sessionStorage.setItem('scrollPos');
+console.log(sessionStorage.getItem('scrollPos');
+  },
+beforeRouteLeave (to, from, next) {
+sessionStorage.setItem('scrollPos');
+console.log(sessionStorage.getItem('scrollPos');
+  },
   computed: {
     posts() {
       return this.$store.state.posts;
