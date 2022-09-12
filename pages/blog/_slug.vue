@@ -46,14 +46,14 @@ export default {
   if(this.post.prev_next.prev){
       return this.posts.find(el => el.slug === this.post.prev_next.prev.slug);
       } else{
-      return this.posts[this.posts.length - 1];
-      }
+      return this.posts['0'];
+}
     },
    nextPost() {
    if(this.post.prev_next.next){
       return this.posts.find(el => el.slug === this.post.prev_next.next.slug);
       } else{
-      return this.posts['0'];
+      return this.posts[this.posts.length - 1];
       }
     },
   },
