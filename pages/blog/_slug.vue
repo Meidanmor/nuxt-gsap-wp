@@ -29,7 +29,7 @@ export default {
     },
   },
   mounted() {
-     console.log(this.post.prev_next);
+     console.log(this.post);
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   this.animatePostContents();
@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       slug: this.$route.params.slug,
-      prevId: this.post.prev_next.prev.slug,
+      prevId: post.prev_next.prev.slug,
     };
   },
    head() {
