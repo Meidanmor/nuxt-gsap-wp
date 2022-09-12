@@ -24,9 +24,9 @@ export default {
     post() {
       return this.posts.find(el => el.slug === this.slug);
     },
-  /*  prevPost() {
-      return this.posts.find(el => el.slug === this.prevId);
-    },*/
+   prevPost() {
+      return this.posts.find(el => el.slug === this.post.prev_next.prev.slug);
+    },
   },
   mounted() {
 console.log(this.post.prev_next.prev.slug);
@@ -36,7 +36,6 @@ console.log(this.post.prev_next.prev.slug);
   data() {
     return {
       slug: this.$route.params.slug,
-     /* prevId: post.prev_next.prev.slug,*/
     };
   },
    head() {
