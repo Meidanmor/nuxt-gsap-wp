@@ -24,20 +24,19 @@ export default {
     post() {
       return this.posts.find(el => el.slug === this.slug);
     },
-    prevPost() {
+  /*  prevPost() {
       return this.posts.find(el => el.slug === this.prevId);
-    },
+    },*/
   },
   mounted() {
-     console.log(this.post);
-
+console.log(this.post.prev_next.prev.slug);
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   this.animatePostContents();
   },
   data() {
     return {
       slug: this.$route.params.slug,
-      prevId: post.prev_next.prev.slug,
+     /* prevId: post.prev_next.prev.slug,*/
     };
   },
    head() {
