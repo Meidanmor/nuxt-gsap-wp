@@ -29,7 +29,7 @@ export default {
     },*/
   },
   mounted() {
-     console.log(this.$route);
+     console.log(this.post.prev_next);
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   this.animatePostContents();
