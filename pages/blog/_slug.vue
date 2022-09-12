@@ -37,11 +37,11 @@ import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 export default {
   beforeRouteEnter(to, from) {
 sessionStorage.setItem('scrollPos');
-console.log(sessionStorage.getItem('scrollPos');
+console.log(sessionStorage.getItem('scrollPos')
   },
 beforeRouteLeave (to, from, next) {
 sessionStorage.setItem('scrollPos');
-console.log(sessionStorage.getItem('scrollPos');
+console.log(sessionStorage.getItem('scrollPos')
   },
   computed: {
     posts() {
