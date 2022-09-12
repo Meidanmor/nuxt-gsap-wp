@@ -10,7 +10,7 @@
          <span class="text front">{{ prevPost.title.rendered }}</span>
          <span class="text back">{{ prevPost.title.rendered }}</span>
          <div class="magnetic theImage">
-       <nuxt-link :to="/${prevPost.slug}`" class="Open">
+       <nuxt-link :to="`/${prevPost.slug}`" class="Open">
        <span>
           צפייה בפרויקט
 </span>
