@@ -65,6 +65,7 @@ ScrollTrigger.refresh();
   },
   data() {
     return {
+    scrollPosSession: false,
       selectedTag: null,
       activeClass: "active"
     };
