@@ -38,7 +38,7 @@ export default {
   },
   mounted(){
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  this.addSmoothScrollBar();
+  //this.addSmoothScrollBar();
   },
   methods:{
    addSmoothScrollBar(){
