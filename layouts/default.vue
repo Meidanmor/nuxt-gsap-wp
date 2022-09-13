@@ -27,17 +27,12 @@ export default {
       
     },
   },*/
- setup() {
-    // same as beforeRouteLeave option with no access to `this`
-    onBeforeRouteLeave((to, from) => {
-console.log('from: '+from);
+  beforeRouteEnter (to, from, next) {
+   console.log(to);
+  },
 
-    })
-
-    // same as beforeRouteUpdate option with no access to `this`
-    onBeforeRouteUpdate(async (to, from) => {
-console.log('to: '+to);
-    })
+ beforeRouteUpdate (to, from, next) {
+   console.log(to, from, next);
   },
   components: {
     AppNav
