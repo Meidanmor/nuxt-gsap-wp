@@ -42,11 +42,9 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
 export default {
-beforeRouteLeave(to, from, next) {
-this.scrollPosSession == true;
-next()
-},
+
 transition(to, from){
+console.log(bodyScrollBar.scrollTop);
 console.log('changed');
 ScrollTrigger.refresh();
 },
@@ -62,7 +60,6 @@ ScrollTrigger.refresh();
   },
   data() {
     return {
-    scrollPosSession: false,
       selectedTag: null,
       activeClass: "active"
     };
