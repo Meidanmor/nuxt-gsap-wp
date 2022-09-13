@@ -20,7 +20,7 @@ import Scrollbar from 'smooth-scrollbar';
 export default {
  watch: {
     $route(to, from) {
-    console.log(bodyScrollBar)
+    console.log(this.bodyScrollBar)
       console.log('route change to', to)
       console.log('route change from', from)
       
@@ -38,7 +38,7 @@ export default {
   },
   mounted(){
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  //this.addSmoothScrollBar();
+  this.addSmoothScrollBar();
   },
   methods:{
    addSmoothScrollBar(){
