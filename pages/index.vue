@@ -42,10 +42,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
 export default {
-    middleware() {
-sessionStorage.setItem('scrollPos', this.bodyScrollBar.offset.y)
-console.log(sessionStorage.getItem('scrollPos'))  
-    },
+
 transition(to, from){
 console.log('changed');
 ScrollTrigger.refresh();
