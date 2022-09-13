@@ -29,7 +29,7 @@ export default {
   },
   data(){
   return{
-     scrollPosSession: false;
+     scrollPosSession: false
      }
   },
   mounted(){
