@@ -15,18 +15,17 @@ import { gsap, Power4 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import Scrollbar from 'smooth-scrollbar';
-import { onBeforeRouteLeave, onBeforeRouteUpdate } from 'vue-router'
 
 
 export default {
-/*  watch: {
+ watch: {
     $route(to, from) {
     console.log(this.bodyScrollBar)
       console.log('route change to', to)
       console.log('route change from', from)
       
     },
-  },*/
+  },
   beforeRouteEnter (to, from, next) {
    console.log(to);
   },
