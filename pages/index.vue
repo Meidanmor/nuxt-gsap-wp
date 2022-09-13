@@ -43,9 +43,8 @@ import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
 export default {
 beforeRouteLeave(to, from, next) {
- sessioStorage.setItem('scrollPos', 10);
- console.log(sessioStorage.getItem('scrollPos'));
- next()
+scrollPosSession == true;
+next()
 },
 transition(to, from){
 console.log('changed');
@@ -55,6 +54,10 @@ ScrollTrigger.refresh();
     AppMasthead
   },
   mounted(){
+  if(scrollPosSession == true){
+  sessioStorage.setItem('scrollPos', this.bodyScrollBar);
+ console.log(sessioStorage.getItem('scrollPos'));
+  }
   console.log(this.posts);
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
  this.startAnim();
