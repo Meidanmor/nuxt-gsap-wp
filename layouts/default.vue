@@ -14,20 +14,32 @@ import AppNav from "~/components/AppNav.vue";
 import { gsap, Power4 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
-//import Scrollbar from 'smooth-scrollbar';
+import Scrollbar from 'smooth-scrollbar';
+import { onBeforeRouteLeave, onBeforeRouteUpdate } from 'vue-router'
+
 
 export default {
 /*  watch: {
     $route(to, from) {
+    console.log(this.bodyScrollBar)
       console.log('route change to', to)
       console.log('route change from', from)
       
     },
   },*/
- beforeRouteUpdate (to, from, next) {
-        console.log('page category beforeRouteUpdate');
-        next();
-    },
+ setup() {
+    // same as beforeRouteLeave option with no access to `this`
+    onBeforeRouteLeave((to, from) => {
+console.log('from: '+from);
+
+    })
+
+    // same as beforeRouteUpdate option with no access to `this`
+    onBeforeRouteUpdate(async (to, from) => {
+console.log('to: '+to);
+      }
+    })
+  },
   components: {
     AppNav
   },
