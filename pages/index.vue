@@ -54,10 +54,7 @@ ScrollTrigger.refresh();
     AppMasthead
   },
   mounted(){
-  if(this.scrollPosSession == true){
-  sessioStorage.setItem('scrollPos', this.bodyScrollBar);
- console.log(sessioStorage.getItem('scrollPos'));
-  }
+  
   console.log(this.posts);
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
  this.startAnim();
