@@ -44,7 +44,7 @@ import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 export default {
 
 transition(to, from){
-console.log(this.bodyScrollBar.scrollTop);
+//console.log(this.bodyScrollBar.scrollTop);
 console.log('changed');
 ScrollTrigger.refresh();
 },
