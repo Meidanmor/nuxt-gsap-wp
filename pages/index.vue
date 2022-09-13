@@ -42,7 +42,11 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
 export default {
-
+beforeRouteLeave(to, from, next) {
+ sessioStorage.setItem('scrollPos', 10);
+ console.log(sessioStorage.getItem('scrollPos'));
+ next()
+},
 transition(to, from){
 console.log('changed');
 ScrollTrigger.refresh();
