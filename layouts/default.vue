@@ -17,36 +17,35 @@ import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 //import Scrollbar from 'smooth-scrollbar';
 
 export default {
-  watch: {
+/*  watch: {
     $route(to, from) {
       console.log('route change to', to)
       console.log('route change from', from)
-      this.scrollPosSession == true;
+      
     },
-  },
+  },*/
+ beforeRouteUpdate (to, from, next) {
+        console.log('page category beforeRouteUpdate');
+        next();
+    },
   components: {
     AppNav
   },
-  data(){
-  return{
-     scrollPosSession: false
-     }
-  },
   mounted(){
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  //this.addSmoothScrollBar();
+  this.addSmoothScrollBar();
   },
   methods:{
-   addSmoothScrollBar(){
+ //  addSmoothScrollBar(){
 // Setup
 
-const scroller = document.querySelector('.SCrollbar');
+const scroller = document.querySelector('.theNuxt');
 
 const bodyScrollBar = Scrollbar.init(scroller, { damping: 0.1, alwaysShowTracks: false });
 window.onbeforeunload = function(e){
   sessionStorage.setItem('bodyScrollBar', bodyScrollBar.offset.y);
 };
-ScrollTrigger.scrollerProxy('.SCrollbar', {
+ScrollTrigger.scrollerProxy('.theNuxt', {
   scrollTop(value) {
     if (arguments.length) {
       bodyScrollBar.scrollTop = value;
