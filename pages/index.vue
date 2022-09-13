@@ -43,7 +43,7 @@ import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
 export default {
 beforeRouteLeave(to, from, next) {
-scrollPosSession == true;
+this.scrollPosSession == true;
 next()
 },
 transition(to, from){
@@ -54,7 +54,7 @@ ScrollTrigger.refresh();
     AppMasthead
   },
   mounted(){
-  if(scrollPosSession == true){
+  if(this.scrollPosSession == true){
   sessioStorage.setItem('scrollPos', this.bodyScrollBar);
  console.log(sessioStorage.getItem('scrollPos'));
   }
