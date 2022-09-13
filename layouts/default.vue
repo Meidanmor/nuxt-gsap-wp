@@ -20,7 +20,7 @@ import Scrollbar from 'smooth-scrollbar';
 export default {
  watch: {
     $route(to, from) {
-    console.log(this.bodyScrollBar)
+    console.log(bodyScrollBar)
       console.log('route change to', to)
       console.log('route change from', from)
       
