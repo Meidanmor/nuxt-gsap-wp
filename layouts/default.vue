@@ -37,7 +37,6 @@ console.log('from: '+from);
     // same as beforeRouteUpdate option with no access to `this`
     onBeforeRouteUpdate(async (to, from) => {
 console.log('to: '+to);
-      }
     })
   },
   components: {
