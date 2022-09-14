@@ -35,9 +35,9 @@ export default {
   components: {
     AppNav
   },
-  mounted(){
+  updated(){
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  //this.addSmoothScrollBar();
+  this.addSmoothScrollBar();
   },
   methods:{
    addSmoothScrollBar(){
