@@ -62,6 +62,7 @@ ScrollTrigger.refresh();
   },
   data() {
     return {
+    addSmoothScrollBar,
       selectedTag: null,
       activeClass: "active"
     };
