@@ -35,8 +35,9 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
 export default {
-  // middleware: 'scrollpos',
-
+  beforeRouteEnter(to, from) {
+console.log('fsferferfefrffaef')
+  },
   computed: {
     posts() {
       return this.$store.state.posts;
