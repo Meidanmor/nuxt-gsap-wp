@@ -32,9 +32,6 @@ import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 //import Scrollbar from 'smooth-scrollbar';
 
 export default {
-beforeDestroy(){
-console.log('SDWAF');
-},
   props: {
     height: {
       type: Number,
@@ -49,12 +46,10 @@ console.log('SDWAF');
       default: "#fff"
     }
   },
-  mounted(){
+ /* mounted(){
   gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
-
   window.addEventListener("load", this.addSmoothScrollBar, true);
-
-  },
+  },*/
 
 methods:{
 }
