@@ -54,7 +54,12 @@ ScrollTrigger.refresh();
     AppMasthead,
   },
   mounted(){
-  
+  window.onbeforeunload = function(e){
+  sessionStorage.setItem('bodyScrollBar', bodyScrollBar.offset.y);
+};
+if(sessionStorage.getItem('bodyScrollBar')){
+  console.log(sessionStorage.getItem('bodyScrollBar'));
+}
   console.log(this.posts);
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
  this.startAnim();
@@ -79,9 +84,6 @@ startAnim(){
 const scroller = document.querySelector('.theNuxt');
 
 const bodyScrollBar = Scrollbar.init(scroller, { damping: 0.1, alwaysShowTracks: false });
-window.onbeforeunload = function(e){
-  sessionStorage.setItem('bodyScrollBar', bodyScrollBar.offset.y);
-};
 ScrollTrigger.scrollerProxy('.theNuxt', {
   scrollTop(value) {
     if (arguments.length) {
