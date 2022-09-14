@@ -31,13 +31,11 @@
   </section>
   </div>
   </div>
-  <smooth-scroll-bar></smooth-scroll-bar>
   
 </template>
 
 <script>
 import AppMasthead from "@/components/AppMasthead.vue";
-import smoothScrollBar from "@/components/smoothScrollBar.vue";
 import Scrollbar from 'smooth-scrollbar';
 import { gsap, Power4 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -54,14 +52,12 @@ ScrollTrigger.refresh();
 },
   components: {
     AppMasthead,
-    smoothScrollBar
   },
   mounted(){
   
   console.log(this.posts);
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  //this.addSmoothScrollBar();
- //this.startAnim();
+ this.startAnim();
 
   },
   data() {
