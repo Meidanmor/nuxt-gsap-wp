@@ -36,6 +36,7 @@
 
 <script>
 import AppMasthead from "@/components/AppMasthead.vue";
+import addSmoothScrollBar from "@/layout/default.vue";
 import Scrollbar from 'smooth-scrollbar';
 import { gsap, Power4 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -55,6 +56,7 @@ ScrollTrigger.refresh();
   
   console.log(this.posts);
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  addSmoothScrollBar();
  //this.startAnim();
 
   },
