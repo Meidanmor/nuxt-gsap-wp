@@ -32,12 +32,6 @@ console.log('flktvkndbmkjmtlkbmetlkm')
   components: {
     AppNav
   },
-  updated: function () {
-  this.$nextTick(function () {
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  this.addSmoothScrollBar();
-  })
-},
   mounted(){
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   this.addSmoothScrollBar();
