@@ -56,7 +56,7 @@ ScrollTrigger.refresh();
   
   console.log(this.posts);
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  addSmoothScrollBar();
+  this.addSmoothScrollBar();
  //this.startAnim();
 
   },
