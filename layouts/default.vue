@@ -26,9 +26,6 @@ export default {
   this.addSmoothScrollBar();      
     },
   },
-router.beforeResolve(async to => {
-console.log('flktvkndbmkjmtlkbmetlkm')
-}),
   components: {
     AppNav
   },
