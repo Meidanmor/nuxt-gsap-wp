@@ -31,7 +31,7 @@
   </section>
   </div>
   </div>
-  <smoothScrollBar/>
+  <smoothScrollBar></smoothScrollBar>
   
 </template>
 
