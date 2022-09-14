@@ -22,8 +22,6 @@ export default {
     $route(to, from) {
       console.log('route change to', to)
       console.log('route change from', from)
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  this.addSmoothScrollBar();      
     },
   },
   components: {
@@ -31,7 +29,7 @@ export default {
   },
   mounted(){
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  this.addSmoothScrollBar();
+  //this.addSmoothScrollBar();
   },
   methods:{
    addSmoothScrollBar(){
