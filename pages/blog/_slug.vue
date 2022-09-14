@@ -35,9 +35,9 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
 export default {
- /* beforeRouteEnter(to, from) {
+ beforeDestroy() {
 console.log('fsferferfefrffaef')
-  },*/
+  },
   computed: {
     posts() {
       return this.$store.state.posts;
@@ -63,7 +63,7 @@ console.log('fsferferfefrffaef')
   mounted() {
 console.log(this.prevPost);
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  //this.animatePostContents();
+  this.animatePostContents();
   },
   data() {
     return {
