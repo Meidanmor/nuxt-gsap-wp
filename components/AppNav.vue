@@ -17,6 +17,9 @@
 import AppIcon from "@/components/AppIcon.vue";
 
 export default {
+  beforeRouteEnter (to, from, next) {
+   console.log('jhghjgjhgjgjhg'+to);
+  },
   components: {
     AppIcon
   }
