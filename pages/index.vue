@@ -55,7 +55,7 @@ ScrollTrigger.refresh();
   
   console.log(this.posts);
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
- this.startAnim();
+ //this.startAnim();
 
   },
   data() {
