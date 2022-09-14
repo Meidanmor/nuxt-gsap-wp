@@ -44,7 +44,9 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
 export default {
-
+beforeDestroy(){
+console.log('SDWAF');
+},
 transition(to, from){
 //console.log(this.bodyScrollBar.scrollTop);
 console.log('changed');
