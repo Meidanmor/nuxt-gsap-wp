@@ -52,7 +52,7 @@ export default {
     "~/plugins/posts.server.js",
     "~/plugins/tags.server.js",
     "~/plugins/dateformat.js",
-{ src: '~plugins/vue-carousel-3d', ssr: false }
+{ src: '~plugins/vue-carousel-3d.js', ssr: false }
   ],
   generate: {
     routes: dynamicRoutes
