@@ -5,6 +5,8 @@
     
 <section class="PROJECTS">
 <div class="max-width">
+<carousel/>  
+
 <h2> PORTFOLIO </h2>
     <ul class="theProjects">
     
@@ -40,6 +42,7 @@ import Scrollbar from 'smooth-scrollbar';
 import { gsap, Power4 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+import carousel from "@/components/carousel.vue";
 
 export default {
 beforeDestroy(){
@@ -52,6 +55,7 @@ ScrollTrigger.refresh();
 },
   components: {
     AppMasthead,
+    carousel,
   },
   mounted(){
   window.onbeforeunload = function(e){
