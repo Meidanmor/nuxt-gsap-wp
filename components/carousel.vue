@@ -14,7 +14,7 @@
 
 <script>
 import { Carousel3d, Slide } from 'vue3-carousel-3d';
-import "vue3-carousel-3d/dist/index.css";
+//import "vue3-carousel-3d/dist/index.css";
 export default {
   components: { 
 Carousel3d, Slide
