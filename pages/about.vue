@@ -8,18 +8,11 @@
     <p>I started painting as a hobby when I was little. I didn't know I had any talent. I believe talent is just a pursued interest. Anybody can do what I do. All you need is a dream in your heart, and an almighty knife. Clouds are free they come and go as they please. Even trees need a friend. We all need friends. Talent is a pursued interest. That is to say, anything you practice you can do.</p>
     <p>We touch the canvas, the canvas takes what it wants. Just a happy little shadow that lives in there. I thought today we would make a happy little stream that's just running through the woods here. We must be quiet, soft and gentle. Zip. That easy.</p>
   </div>
-<carousel/>  
  
 </template>
 
 <script>
-import carousel from "@/components/carousel.vue";
 
-export default {
-  components: { 
-carousel
-   },
-};
 </script>
 
 <style lang="scss" scoped>
