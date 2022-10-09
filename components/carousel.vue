@@ -1,4 +1,5 @@
 <template>
+ <no-ssr placeholder="Loading...">
 <carousel-3d>
   <slide :index="0">
     Slide 1 Content
@@ -10,6 +11,8 @@
     Slide 3 Content
   </slide>
 </carousel-3d>
+    </no-ssr>
+
 </template>
 
 <script>
